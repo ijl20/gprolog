@@ -9,12 +9,19 @@ h1 { margin: 0px;
 
 .contents { width: 20%;
             float: left;
+            height: 95vh;
+            overflow-y: scroll;
           }
 
 .content { width: 75%;
            float: left;
-           height: 3000px;
+            height: 95vh;
+            overflow-y: scroll;
 }
+
+p { margin: 10px;
+}
+
 .c000{border-spacing:0;}
 .c001{border-spacing:6px;border-collapse:separate;}
 .c002{color:#006600}
