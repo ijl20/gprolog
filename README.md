@@ -1,19 +1,24 @@
-                                GNU PROLOG
-                                ==========
+# The GNU Prolog compiler (gprolog) 
 
-			      by Daniel Diaz
-			   Daniel.Diaz@univ-paris1.fr
+## Introduction
 
+GNU Prolog is a free Prolog compiler with constraint solving over finite domains. 
+GNU Prolog accepts a Prolog+constraint program and produces a native binary 
+(like gcc does from a C source). The obtained executable is then stand-alone. 
+The size of this executable can be quite small since GNU Prolog can avoid to 
+link the code of most unused built-in predicates. The performances of 
+GNU Prolog are very encouraging (comparable to commercial systems).
 
-INTRODUCTION
-************
+Beside the native-code compilation, GNU Prolog offers a classical interactive interpreter (top-level).
 
-GNU Prolog is a native Prolog compiler with constraint solving over finite
-domains (FD) developed by Daniel Diaz (http://cri-dist.univ-paris1.fr/diaz/)
-Last information can be found at http://www.gnu.org/software/prolog
-or better at http://www.gprolog.org.
+The Prolog part conforms to the ISO standard for Prolog with many extensions very useful in practice (global variables, OS interface, sockets,...).
 
-A lot of work has been devoted to the ISO compatibility. GNU Prolog is very
+GNU Prolog also includes an efficient constraint solver over Finite Domains (FD). This opens contraint logic pogramming to the user combining the power of constraint programming to the declarativity of logic programming.
+
+More information about GNU Prolog can be found at the GNU Prolog web site.
+GNU Prolog is a native Prolog compiler with additional support for
+constraint solving over finite
+domains.A lot of work has been devoted to the ISO compatibility. GNU Prolog is very
 close to the ISO standard.
 
 Here are some features of GNU Prolog:
@@ -57,8 +62,7 @@ Constraint solver:
 
 
 
-PORTS
-*****
+## Ports
 
 GNU Prolog is currently ported to the following architectures:
 
@@ -89,16 +93,11 @@ GNU Prolog is currently ported to the following architectures:
    - mips / irix
 
 
-
-INSTALLATION
-************
+## Installation
 
 Please refer to the INSTALL file (in the same directory)
 
-
-
-USING GNU PROLOG
-****************
+## Using GNU Prolog
 
 Be sure that adequate environment variables are set (see INSTALL)
 
@@ -120,9 +119,7 @@ brief overview of available options).
 Refer to the documentation for more information (see below).
 
 
-
-WINDOWS
-*******
+## Windows
 
 In Microsoft Windows if you intend to use the gplc compiler as described in
 the documentation you need to ascertain the following conditions are
@@ -145,36 +142,17 @@ provided is for gplc calling 'gcc' and the options passed by GNU
 Prolog will not work (see file ExamplesC/README).
 
 
+## Documentation
 
-DOCUMENTATION
-*************
+See ```doc/index.html```
 
-The directory doc contains various versions of the manual. Refer to the
-file doc/README for more information.
-
-An in-line HTML version can be accessed from the GNU Prolog web page.
-
-
-
-WEB
-***
-
-The GNU Prolog web site is: http://www.gnu.org/software/prolog/
-or also (primary web site): http://www.gprolog.org/
-
-
-
-MAILING LIST
-************
+## Mailing List
 
 To communicate with other GNU Prolog users and/or implementors send a mail to
 users-prolog@gnu.org. To (un)subscribe to this mailing list send a mail to
 users-prolog-request@gnu.org with (un)subscribe in the subject line.
 
-
-
-BUGS
-****
+## Bugs
 
 Please report bugs to bug-prolog@gnu.org. To (un)subscribe to this mailing
 list send a mail to bug-prolog-request@gnu.org with (un)subscribe in the
@@ -182,10 +160,11 @@ subject line.
 
 
 
-COPYING
-*******
+## Credits and Copying
 
-GNU Prolog is free software. Since version 1.4.0, GNU Prolog distributed
+GNU Prolog was developed by Daniel Diaz (http://cri-dist.univ-paris1.fr/diaz/).
+
+GNU Prolog is free software distributed
 under a dual license: LGPL or GPL. So, you can redistribute it and/or modify
 it under the terms of either:
 
@@ -199,18 +178,5 @@ or
     Foundation; either version 2 of the License, or (at your option) any
     later version.  
 
-or both in parallel (as here).
+or both in parallel.
 
-GNU Prolog is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received copies of the GNU General Public License and the GNU
-Lesser General Public License along with this program. If not, see
-http://www.gnu.org/licenses/.
-
-Remark: versions of GNU Prolog prior to 1.4.0 were entirely released under
-the GNU General Public License (GPL).
-
-
-LocalWords:  wamcc sparc irix gplc prog.pl mingw-as.exe
