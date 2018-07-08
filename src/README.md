@@ -1,16 +1,13 @@
-		General Compilation Information
-
+# General Compilation Information
 
 This directory contains the source of GNU Prolog. 
 
-1) Compiling locally
---------------------
+## Compiling locally
 
 To compile the package locally use:
 
    ./configure [OPTIONS]
    make
-
 
 For more information about the options of configure refer to the INSTALL file in the parent directory. 
 
@@ -19,8 +16,7 @@ installation directories (see 2) after the local compilation (i.e. the
 compilation will not be done again).
 
 
-2) Cleaning
------------
+## Cleaning
 
 To remove installed files (remove the content of INSTALL_DIR):
 
@@ -35,8 +31,7 @@ To fully clean up the local compilation:
    make distclean
 
 
-2) Rebuilding a source distribution
------------------------------------
+## Rebuilding a source distribution
 
 To rebuild a source distribution file:
 
@@ -44,26 +39,16 @@ To rebuild a source distribution file:
 
 this will create a file gprolog-xxx.tgz (in the src directory).
 
-
-
-3) Building a RPM distribution
--------------------------------
+## Building a RPM distribution
 
 Refer to the file src/RPM/README for more information
 
-
-
-4) Building a debian package
-----------------------------
+## Building a debian package
 
 Refer to the file src/debian/README for more information
 
-
-
-5) Building a Win32 auto-install distribution
----------------------------------------------
+## Building a Win32 auto-install distribution
 
 Refer to the file src/Win32/README for more information
-
 
 

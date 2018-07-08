@@ -95,7 +95,7 @@ GNU Prolog is currently ported to the following architectures:
 
 ## Installation
 
-Please refer to the INSTALL file (in the same directory)
+Please see [INSTALL.md](INSTALL.md)
 
 ## Using GNU Prolog
 
