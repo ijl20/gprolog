@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hevea 2.05">
+
+<meta name="Author" content="Daniel Diaz">
+<meta name="Keywords" content="GNU Prolog, manual, Prolog, compiler, constraints, finite domains">
+<link rel="icon" type="image/x-icon" href="/gprolog.ico"><link rel="stylesheet" type="text/css" href="gprolog.css">
+<title>gprolog</title>
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
+</head>
+<body>
+    <h1>GNU Prolog</h1>
+<hr>
+<div class="contents">
+
+<h2 class="section" id="sec1">Contents</h2>
+<ul class="ftoc1"><li class="li-toc">
+<a target="content" href="gprolog002.html#sec2">1&#XA0;&#XA0;Acknowledgements</a>
+</li><li class="li-toc"><a target="content" href="gprolog003.html#sec3">2&#XA0;&#XA0;GNU Prolog License Conditions</a>
+</li><li class="li-toc"><a target="content" href="gprolog004.html#sec4">3&#XA0;&#XA0;Introduction</a>
+</li><li class="li-toc"><a target="content" href="gprolog005.html#sec5">4&#XA0;&#XA0;Using GNU Prolog</a>
+<ul class="ftoc2"><li class="li-toc">
+<a target="content" href="gprolog006.html#sec6">4.1&#XA0;&#XA0;Introduction</a>
+</li><li class="li-toc"><a target="content" href="gprolog007.html#sec7">4.2&#XA0;&#XA0;The GNU Prolog interactive interpreter</a>
+</li><li class="li-toc"><a target="content" href="gprolog008.html#sec14">4.3&#XA0;&#XA0;Adjusting the size of Prolog data</a>
+</li><li class="li-toc"><a target="content" href="gprolog009.html#sec15">4.4&#XA0;&#XA0;The GNU Prolog compiler</a>
+</li></ul>
+</li><li class="li-toc"><a target="content" href="gprolog010.html#sec22">5&#XA0;&#XA0;Debugging</a>
+<ul class="ftoc2"><li class="li-toc">
+<a target="content" href="gprolog011.html#sec23">5.1&#XA0;&#XA0;Introduction</a>
+</li><li class="li-toc"><a target="content" href="gprolog012.html#sec24">5.2&#XA0;&#XA0;The procedure box model</a>
+</li><li class="li-toc"><a target="content" href="gprolog013.html#sec25">5.3&#XA0;&#XA0;Debugging predicates</a>
+</li><li class="li-toc"><a target="content" href="gprolog014.html#sec29">5.4&#XA0;&#XA0;Debugging messages</a>
+</li><li class="li-toc"><a target="content" href="gprolog015.html#sec30">5.5&#XA0;&#XA0;Debugger commands</a>
+</li><li class="li-toc"><a target="content" href="gprolog016.html#sec31">5.6&#XA0;&#XA0;The WAM debugger</a>
+</li></ul>
+</li><li class="li-toc"><a target="content" href="gprolog017.html#sec32">6&#XA0;&#XA0;Format of definitions</a>
+<ul class="ftoc2"><li class="li-toc">
+<a target="content" href="gprolog018.html#sec33">6.1&#XA0;&#XA0;General format</a>
+</li><li class="li-toc"><a target="content" href="gprolog019.html#sec34">6.2&#XA0;&#XA0;Types and modes</a>
+</li><li class="li-toc"><a target="content" href="gprolog020.html#sec35">6.3&#XA0;&#XA0;Errors</a>
+</li></ul>
+</li><li class="li-toc"><a target="content" href="gprolog021.html#sec48">7&#XA0;&#XA0;Prolog directives and control constructs</a>
+<ul class="ftoc2"><li class="li-toc">
+<a target="content" href="gprolog022.html#sec49">7.1&#XA0;&#XA0;Prolog directives</a>
+</li><li class="li-toc"><a target="content" href="gprolog023.html#sec65">7.2&#XA0;&#XA0;Prolog control constructs</a>
+</li></ul>
+</li><li class="li-toc"><a target="content" href="gprolog024.html#sec70">8&#XA0;&#XA0;Prolog built-in predicates</a>
+<ul class="ftoc2"><li class="li-toc">
+<a target="content" href="gprolog025.html#sec71">8.1&#XA0;&#XA0;Type testing</a>
+</li><li class="li-toc"><a target="content" href="gprolog026.html#sec73">8.2&#XA0;&#XA0;Term unification</a>
+</li><li class="li-toc"><a target="content" href="gprolog027.html#sec77">8.3&#XA0;&#XA0;Term comparison</a>
+</li><li class="li-toc"><a target="content" href="gprolog028.html#sec81">8.4&#XA0;&#XA0;Term processing</a>
+</li><li class="li-toc"><a target="content" href="gprolog029.html#sec91">8.5&#XA0;&#XA0;Variable naming/numbering</a>
+</li><li class="li-toc"><a target="content" href="gprolog030.html#sec96">8.6&#XA0;&#XA0;Arithmetic</a>
+</li><li class="li-toc"><a target="content" href="gprolog031.html#sec101">8.7&#XA0;&#XA0;Dynamic clause management</a>
+</li><li class="li-toc"><a target="content" href="gprolog032.html#sec108">8.8&#XA0;&#XA0;Predicate information</a>
+</li><li class="li-toc"><a target="content" href="gprolog033.html#sec111">8.9&#XA0;&#XA0;All solutions</a>
+</li><li class="li-toc"><a target="content" href="gprolog034.html#sec115">8.10&#XA0;&#XA0;Streams</a>
+</li><li class="li-toc"><a target="content" href="gprolog035.html#sec143">8.11&#XA0;&#XA0;Constant term streams</a>
+</li><li class="li-toc"><a target="content" href="gprolog036.html#sec149">8.12&#XA0;&#XA0;Character input/output</a>
+</li><li class="li-toc"><a target="content" href="gprolog037.html#sec155">8.13&#XA0;&#XA0;Byte input/output</a>
+</li><li class="li-toc"><a target="content" href="gprolog038.html#sec160">8.14&#XA0;&#XA0;Term input/output</a>
+</li><li class="li-toc"><a target="content" href="gprolog039.html#sec174">8.15&#XA0;&#XA0;Input/output from/to constant terms</a>
+</li><li class="li-toc"><a target="content" href="gprolog040.html#sec181">8.16&#XA0;&#XA0;DEC-10 compatibility input/output</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog041.html#sec188">8.17&#XA0;&#XA0;Term expansion</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog042.html#sec192">8.18&#XA0;&#XA0;Logic, control and exceptions</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog043.html#sec197">8.19&#XA0;&#XA0;Atomic term processing</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog044.html#sec209">8.20&#XA0;&#XA0;List processing</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog045.html#sec224">8.21&#XA0;&#XA0;Global variables</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog046.html#sec232">8.22&#XA0;&#XA0;Prolog state</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog047.html#sec238">8.23&#XA0;&#XA0;Program state</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog048.html#sec242">8.24&#XA0;&#XA0;System statistics</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog049.html#sec245">8.25&#XA0;&#XA0;Random number generator</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog050.html#sec250">8.26&#XA0;&#XA0;File name processing</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog051.html#sec255">8.27&#XA0;&#XA0;Operating system interface</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog052.html#sec285">8.28&#XA0;&#XA0;Sockets input/output</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog053.html#sec294">8.29&#XA0;&#XA0;Linedit management</a>
+
+</li></ul>
+</li><li class="li-toc"><a target="content" href="gprolog054.html#sec299">9&#XA0;&#XA0;Finite domain solver and built-in predicates</a>
+<ul class="ftoc2"><li class="li-toc">
+<a target="content" href="gprolog055.html#sec300">9.1&#XA0;&#XA0;Introduction</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog056.html#sec302">9.2&#XA0;&#XA0;FD variable parameters</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog057.html#sec306">9.3&#XA0;&#XA0;Initial value constraints</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog058.html#sec309">9.4&#XA0;&#XA0;Type testing</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog059.html#sec311">9.5&#XA0;&#XA0;FD variable information</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog060.html#sec314">9.6&#XA0;&#XA0;Arithmetic constraints</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog061.html#sec319">9.7&#XA0;&#XA0;Boolean and reified constraints</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog062.html#sec324">9.8&#XA0;&#XA0;Symbolic constraints</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog063.html#sec330">9.9&#XA0;&#XA0;Labeling constraints</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog064.html#sec332">9.10&#XA0;&#XA0;Optimization constraints</a>
+
+</li></ul>
+</li><li class="li-toc"><a target="content" href="gprolog065.html#sec334">10&#XA0;&#XA0;Interfacing Prolog and C</a>
+<ul class="ftoc2"><li class="li-toc">
+<a target="content" href="gprolog066.html#sec335">10.1&#XA0;&#XA0;Introduction</a>
+</li><li class="li-toc"><a target="content" href="gprolog067.html#sec336">10.2&#XA0;&#XA0;Including and using <span class="c003">gprolog.h</span></a>
+</li><li class="li-toc"><a target="content" href="gprolog068.html#sec337">10.3&#XA0;&#XA0;Calling C from Prolog</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog069.html#sec348">10.4&#XA0;&#XA0;Manipulating Prolog terms</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog070.html#sec358">10.5&#XA0;&#XA0;Raising Prolog errors</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog071.html#sec371">10.6&#XA0;&#XA0;Calling Prolog from C</a>
+
+</li><li class="li-toc"><a target="content" href="gprolog072.html#sec375">10.7&#XA0;&#XA0;Defining a new C <span class="c003">main()</span> function</a>
+
+</li></ul>
+</li><li class="li-toc"><a target="content" href="gprolog073.html#%40biblio">References</a>
+</li><li class="li-toc"><a target="content" href="gprolog-idx.html#%40index">Index</a>
+</li></ul>
+
+</div>
+<iframe name="content" class="content" src="gprolog002.html" 
+        onload="this.style.height=this.contentDocument.body.scrollHeight +'px';">
+</iframe>
+<hr class="c011">
+Copyright (C) 1999-2013 Daniel Diaz
+Verbatim copying and distribution of this entire article is permitted in any
+medium, provided this notice is preserved. <a target="content" href="index.html#copyright">More about the copyright</a>
+<hr>
+<a target="content" href="index.html"><img src="contents_motif.gif" alt="Up"></a>
+<a target="content" href="gprolog002.html"><img src="next_motif.gif" alt="Next"></a>
+</body>
+</html>
