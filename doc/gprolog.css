@@ -1,22 +1,27 @@
 
 
 body { font-family: sans-serif;
-       width: 100%;
 }
 
 h1 { margin: 0px;
 }
 
 .contents { width: 20%;
-            float: left;
-            height: 95vh;
+            display: inline-block;
+            height: 90vh;
             overflow-y: scroll;
           }
 
 .content { width: 75%;
-           float: left;
-            height: 95vh;
+           display: inline-block;
+            height: 90vh;
             overflow-y: scroll;
+}
+
+.content_link { text-decoration-line: none;
+}
+
+a { text-decoration-line: none;
 }
 
 p { margin: 10px;
@@ -25,7 +30,11 @@ p { margin: 10px;
 .c000{border-spacing:0;}
 .c001{border-spacing:6px;border-collapse:separate;}
 .c002{color:#006600}
-.c003{font-family:monospace}
+
+.c003 {
+    font-family: monospace;
+}
+
 .c004{font-family:monospace;font-style:italic}
 .c005{font-family:monospace;font-weight:bold}
 .c006{font-size:small}
@@ -61,10 +70,6 @@ pre{text-align:left;margin-left:0ex;margin-right:auto;}
 blockquote{margin-left:4ex;margin-right:4ex;text-align:left;}
 td p{margin:0px;}
 .hbar{border:none;height:2px;width:100%;background-color:black;}
-body{background-color:white}
-a:link{color:#00B200;text-decoration:underline;}
-a:visited{color:#006600;text-decoration:underline;}
-a:hover{color:black;text-decoration:none;background-color:#99FF99}
 .section{padding:.5ex;background-color:#2DE52D}
 .subsection{padding:0.3ex;background-color:#66FF66}
 .subsubsection{padding:0.5ex;background-color:#99FF99}

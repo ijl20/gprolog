@@ -3,6 +3,36 @@
 ## Introduction
 
 GNU Prolog is a free Prolog compiler with constraint solving over finite domains. 
+
+## Linux installation
+
+```
+sudo apt install git
+git clone https://github.com/ijl20/gprolog.git
+cd gprolog
+./configure
+make
+sudo make install
+```
+
+## Running gprolog
+
+```
+$ gprolog
+
+?- [user].
+hello(world).
+Ctrl-D
+
+?- hello(X).
+X = world
+
+Ctrl-D
+$
+```
+
+## More introduction...
+
 GNU Prolog accepts a Prolog+constraint program and produces a native binary 
 (like gcc does from a C source). The obtained executable is then stand-alone. 
 The size of this executable can be quite small since GNU Prolog can avoid to 
@@ -95,7 +125,7 @@ GNU Prolog is currently ported to the following architectures:
 
 ## Installation
 
-Please see [INSTALL.md](INSTALL.md)
+See [INSTALL.md](INSTALL.md)
 
 ## Using GNU Prolog
 
