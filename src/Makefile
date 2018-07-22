@@ -1,7 +1,7 @@
 #                               MAIN MAKEFILE
 #                               -------------
 
-ROOT_DIR       = /home/ijl20/src/prolog/gprolog-code
+ROOT_DIR       = /home/ijl20/src/prologpf
 PKG_NAME       = gprolog-1.4.4
 
 INSTALL_DIR    = $(DESTDIR)/usr/local/gprolog-1.4.4

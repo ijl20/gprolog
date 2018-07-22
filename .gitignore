@@ -30,4 +30,6 @@ VERSION
 #*#
 
 !configure
+src/config.log
+src/config.status
 
