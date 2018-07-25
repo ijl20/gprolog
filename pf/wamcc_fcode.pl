@@ -87,8 +87,8 @@ fun_decl_to_fcode((F @ A = B; G),Code) :-   % principal functor = ';'
     g_read(def_funs,Fs),
     g_assign(def_funs,[F|Fs]),              % record name of defined function
     fmangle(F, F1),                         % foo -> $fun_foo 
-    set_pred_info(def,F1,2),                % specify pred_info(defined)
-    set_pred_info(pub,F1,2),                % specify all funcs 'public'
+    %    set_pred_info(def,F1,2),                % specify pred_info(defined)
+    %    set_pred_info(pub,F1,2),                % specify all funcs 'public'
     fun_decl_to_fcode1((F @ A = B; G),FGCode), % build $fun_foo clauses
     make_lambda(F @ A,LCode),                  % add $fun_foo(..lambda..)
     append(FGCode,[LCode],Code),
@@ -98,8 +98,8 @@ fun_decl_to_fcode(F @ A = B, Code) :-    % principal functor = '='
     g_read(def_funs,Fs),
     g_assign(def_funs,[F|Fs]),           % record name of defined function
     fmangle(F, F1),                      % foo -> $fun_foo 
-    set_pred_info(def,F1,2),             % specify pred_info(defined)
-    set_pred_info(pub,F1,2),             % specify all funcs 'public'
+    % set_pred_info(def,F1,2),             % specify pred_info(defined)
+    % set_pred_info(pub,F1,2),             % specify all funcs 'public'
     fun_decl_to_fcode1(F @ A = B,FCode), % FCode = $fun_foo(..) :- ...
     make_lambda(F @ A, LCode),           % LCode = $fun_foo(..lambda..) :- ...
     append(FCode,[LCode],Code),
