@@ -1,24 +1,27 @@
-# The GNU Prolog compiler (gprolog) 
+# PrologPF
 
 ## Introduction
 
-GNU Prolog is a free Prolog compiler with constraint solving over finite domains. 
+PrologPF is an interpreter/compiler based on GNU Prolog, extended to support functions (and deprecating *cut*) and
+providing automatic support for parallelized execution.
+
+(GNU Prolog Manual)[https://people.ds.cam.ac.uk/ijl20/computer_science/prologpf/doc]
 
 ## Linux installation
 
 ```
 sudo apt install git
-git clone https://github.com/ijl20/gprolog.git
-cd gprolog
+git clone https://github.com/ijl20/prologpf.git
+cd prologpf
 ./configure
 make
 sudo make install
 ```
 
-## Running gprolog
+## Running prologpf
 
 ```
-$ gprolog
+$ ./prologpf
 
 ?- [user].
 hello(world).
